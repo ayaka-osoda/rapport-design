@@ -5,7 +5,7 @@ import { ref } from 'vue'
 const props = defineProps<{
   val: string,
   size?: { w?: string, h?: string },
-  disabled: boolean,
+  disabled?: boolean,
 }>()
 const emits = defineEmits(['change'])
 

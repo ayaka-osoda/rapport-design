@@ -1,5 +1,6 @@
 <!-- eslint-disable @typescript-eslint/no-unused-vars -->
 <script setup lang="ts">
+import { icon } from '@/assets/icon/index';
 const props = defineProps<{
   iconCode: 'visiblity' | 'visiblity-off',
   clickable?: boolean,
@@ -7,10 +8,10 @@ const props = defineProps<{
 const emits = defineEmits(['onClick'])
 
 const sourceMap = {
-  'arrow-back': 'src/assets/icon/arrow-back.svg',
-  'arrow-forward': 'src/assets/icon/arrow-forward.svg',
-  'visiblity': 'src/assets/icon/visibility.svg',
-  'visiblity-off': 'src/assets/icon/visibility-off.svg',
+  'arrow-back': icon.arrowBack,
+  'arrow-forward': icon.arrowForward,
+  'visiblity': icon.visibility,
+  'visiblity-off': icon.visibilityOff,
 };
 
 const clickIcon = () => {

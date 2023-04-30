@@ -2,7 +2,7 @@
 <script setup lang="ts">
 defineProps<{
   appearance: 'primary' | 'secondary' | 'tertiary' | 'quaternary',
-  disabled: boolean,
+  disabled?: boolean,
 }>()
 const emits = defineEmits(['onClick'])
 

@@ -1,7 +1,8 @@
 <!-- eslint-disable @typescript-eslint/no-unused-vars -->
 <script setup lang="ts">
-import { computed } from 'vue'
-import RapportIcon from '@/parts/RapportIcon.vue'
+import { computed } from 'vue';
+import { image } from '@/assets/image/index'
+import RapportIcon from '@/parts/RapportIcon.vue';
 import {
   getAWeekIncludingTheSpecifiedDate,
   getDay,
@@ -27,10 +28,10 @@ const month = computed(() => props.specifiedDay.getMonth());
 const day = computed(() => props.specifiedDay.getDate());
 
 const sourceMap = {
-  'nosend': 'src/assets/image/nosend.png',
-  'sendonlybyyou': 'src/assets/image/sendonlybyyou.png',
-  'sendonlybyme': 'src/assets/image/sendonlybyme.png',
-  'fullsend': 'src/assets/image/fullsend.png',
+  'nosend': image.nosend,
+  'sendonlybyyou': image.sentOnlyByYou,
+  'sendonlybyme': image.sentOnlyByMe,
+  'fullsend': image.fullsend,
 };
 
 const specifiedWeek = computed(() => getAWeekIncludingTheSpecifiedDate(year.value, month.value, day.value));
